@@ -18,7 +18,7 @@ public class Task implements ITask {
         this.title = title;
     }
 
-    public enum Status{
+    public enum Status {
         ToDo, InProgress, Done
     }
 
@@ -37,16 +37,19 @@ public class Task implements ITask {
         return urgency;
     }
 
-    public static class TaskBuilder{
+    public static class TaskBuilder {
         private final Task task = new Task();
-        public TaskBuilder id (long id){
+
+        public TaskBuilder id(long id) {
             task.setId(id);
             return this;
         }
-        public TaskBuilder title(String title){
+
+        public TaskBuilder title(String title) {
             task.setTitle(title);
             return this;
         }
+
         public Task build() {
             return task;
         }

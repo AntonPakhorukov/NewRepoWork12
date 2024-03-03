@@ -11,8 +11,10 @@ import java.util.List;
 public interface TaskController {
     @PostMapping("/{id}/{urgency}")
     public ResponseEntity<String> createTask(@PathVariable(name = "id") long id, @PathVariable(name = "urgency") String urgency);
+
     @GetMapping("/urgency")
     public ResponseEntity<List<ITask>> getAllUrgencyTasks();
+
     @GetMapping("/noturgency")
     public ResponseEntity<List<ITask>> getAllNotUrgencyTasks();
 

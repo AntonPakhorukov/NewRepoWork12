@@ -9,8 +9,9 @@ import patterns.service.TaskServiceFacade;
 import java.util.List;
 
 @RestController
-public class TaskControllerImpl implements TaskController{
+public class TaskControllerImpl implements TaskController {
     private TaskServiceFacade facade;
+
     @Autowired
     public TaskControllerImpl(TaskServiceFacade facade) {
         this.facade = facade;
